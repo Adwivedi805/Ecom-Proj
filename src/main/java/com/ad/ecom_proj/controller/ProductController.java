@@ -100,5 +100,9 @@ public class ProductController {
         List<Product> products = service.searchProducts(keyword);
         return new ResponseEntity<>(products, HttpStatus.OK);
     }
+    @GetMapping("/test")
+    public String testEndpoint() {
+        return "Test endpoint is working!";
+    }
 
 }
